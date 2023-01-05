@@ -8,6 +8,19 @@ body {
     background-color: rgb(253, 247, 230);
     padding: 40px;
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container {
+    background-color: rgb(243, 245, 245);
+    width: 70%;
+    padding: 20px;
+}
+
+
+header {
+    width: 100%;
 }
 
 .navbar {
@@ -53,11 +66,172 @@ body {
     width: 18px;
     background-color: black;
     margin: 5px auto;
-    -webkit-transition: 0.7s ease-in-out;
-    transition: 0.7s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
+/* ###################################### */
+
+.container1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:  
+    'content1 content1 content4'
+    'content2 content3 content4'
+    ;
+    gap: 20px;
+    min-height: 60vh;
+    width: 100%;
+    margin: 30px 0;
+}
+.container1 p {
+    color: rgb(44, 44, 44);
+    font-weight: lighter;
+    word-wrap: break-word;
+}
+
+
+.container1 .content1 {
+    grid-area: content1;
+    background-color: burlywood;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./images/image-web-3-desktop.jpg);
+    text-align: center;
+    min-height: 300px;
+}
+/* ######### */
+
+.container1 .content2 {
+    grid-area: content2;
+    /* background-color: burlywood; */
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 150px;
+    max-width: 250px;
+    word-wrap: break-word;
+    vertical-align: top;
+}
+/* ######### */
+
+.container1 .content3 {
+    grid-area: content3;
+    /* background-color: burlywood; */
+    justify-content: center;
+    align-items: center;
+    max-height: 150px;
+}
+.content3 p {
+    word-spacing: 5px;
+    padding: 10px;
+}
+.btn {
+    font-size: 15px;
+    padding: 10px;
+    color: rgb(253, 247, 230);
+    border: 2px solid rgb(0, 0, 29);
+    background-color: rgb(0, 0, 29);
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+/* ######### */
+
+.content4 {
+    grid-area: content4;
+    background-color: rgb(0, 0, 29);
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    /* align-items: center; */
+    /* max-height: 475px; */
+    display: flex;
+    flex-direction: column;
+}
+.content4 p {
+    color: rgb(174, 176, 177);
+}
+
+.cont1 h1 {
+    font-size: 25px;
+    color: rgb(238, 165, 6);
+    margin: 0 0 10px 0;
+}
+.content4 h5 {
+    color: aliceblue;
+    font-size: 15px;
+    word-spacing: 5px;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.cont2 h5 {
+    color: rgb(238, 165, 6);
+    font-size: 15px;
+    word-spacing: 5px;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+hr {
+    border: 0.5px solid grey;
+}
+
+/* ################################ */
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 50px 0 0 0;
+    width: 100%;
+}
+
+/* .container2 .content1 {
+
+} */
+.content2 {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    min-width: 200px;
+}
+.content2 h2, p {
+    color: gray;
+}
+.cont4 {
+    font-size: 16px;
+    word-wrap: break-word;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 700px){
+
+    body {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
     .hamburger {
         display: block;
     }
@@ -91,6 +265,62 @@ body {
     .navMenu.active {
         right: -20%;
     }
+    /* ################# */
 
+    .main-container {
+        width: 100%;
+    }
 
+    .container1 {
+        display: block;
+        margin: 10px;
+        padding: 10px;
+    }
+    .btn {
+        background-color: rgb(250, 37, 37);
+        border: 2px solid rgb(250, 37, 37);
+        padding: 10px;
+    }
+    .btn:hover {
+        border: 2px solid rgb(0, 0, 29);
+        background-color: rgb(0, 0, 29);
+    }
+   
+    .container1 .content1, .container1 .content2,.container1 .content3,.container1 .content4 {
+        max-width: none;
+        min-height: none;
+        margin: 10px;
+        padding: 30px;
+    }
+   
+    .container1 .content4 {
+        margin-top: 130px;
+    }
+/* ########################### */
+
+    .container2 {
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    padding: 20px;
+}
+
+/* .container2 .content1 {
+
+} */
+.content2 {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    min-width: 200px;
+}
+.content2 h2, p {
+    color: gray;
+}
+.cont4 {
+    font-size: 16px;
+    word-wrap: break-word;
+    padding: 5px;
+}
+   
 }
